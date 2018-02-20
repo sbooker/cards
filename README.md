@@ -44,7 +44,8 @@
 5) В качестве архитектуры принята многослойная, характерная для монолитных enterprise-приложений
 6) Библиотека yiisoft/yii2-elasticsearch выглядит очень странно (AR для поиска? Зачем?). С дефолтной конфигурацией не завелась:
 
-`Error Info:
+`
+Error Info:
  Array
  (
      [requestMethod] => PUT
@@ -56,14 +57,13 @@
              [content-type] => application/json; charset=UTF-8
              [content-length] => 97
          )
- 
-     [responseBody] => Array
+      [responseBody] => Array
          (
              [error] => Content-Type header [application/x-www-form-urlencoded] is not supported
              [status] => 406
          )
- 
- )`
+  )
+ `
  
 ruflin/elastica имеет более высокий порог вхождения для человека вообще незнакомого с ElasticSearch. 
 Изучить можно, но явно не в рамках тестового задания.

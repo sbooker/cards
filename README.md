@@ -45,17 +45,6 @@
 6) Библиотека yiisoft/yii2-elasticsearch выглядит очень странно (AR для поиска? Зачем?). С дефолтной конфигурацией не завелась:
 
 
-    Error Info:
-    Array
-    (
-     [requestMethod] => PUT
-     [requestUrl] => http://docker.dev:9200/card-searches
-     [requestBody] => {"settings":[],"mappings":{"card-search":{"properties":{"name":{"type":"string"},"description":{"type":"string"},"created_at":{"type":"long"}}}}}
-     [responseCode] => 406
-     [responseHeaders] => Array(
-             [content-type] => application/json; charset=UTF-8
-             [content-length] => 97
-           )
     [responseBody] => Array
          (
              [error] => Content-Type header [application/x-www-form-urlencoded] is not supported

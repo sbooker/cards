@@ -1,0 +1,15 @@
+<?php
+return [
+    'components' => [
+        'db' => [
+            'dsn' => 'mysql:host=docker.dev;dbname=cards',
+            'username' => 'root',
+            'password' => 'root',
+        ],
+        'elasticsearch' => [
+            'nodes' => [
+                ['http_address' => 'docker.dev:9200'],
+            ],
+        ],
+    ],
+];

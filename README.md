@@ -41,4 +41,28 @@
 Это отражено в миграции - таблица с карточками отдельно от таблицы со счетчиками. 
 4) В качестве идетификатора используется сгенерированный кодом UUID, а не автоинкремент БД. Так работать будет быстрее (особенно при интенсивном добавлении записей)
  и это более масштабируемое решение. 
+5) В качестве архитектуры принята многослойная, характерная для монолитных enterprise-приложений
+6) Библиотека yiisoft/yii2-elasticsearch выглядит очень странно (AR для поиска? Зачем?). С полтычка не завелась:
+`Error Info:
+ Array
+ (
+     [requestMethod] => PUT
+     [requestUrl] => http://docker.dev:9200/card-searches
+     [requestBody] => {"settings":[],"mappings":{"card-search":{"properties":{"name":{"type":"string"},"description":{"type":"string"},"created_at":{"type":"long"}}}}}
+     [responseCode] => 406
+     [responseHeaders] => Array
+         (
+             [content-type] => application/json; charset=UTF-8
+             [content-length] => 97
+         )
+ 
+     [responseBody] => Array
+         (
+             [error] => Content-Type header [application/x-www-form-urlencoded] is not supported
+             [status] => 406
+         )
+ 
+ )`
+ruflin/elastica имеет более высокий порог вхождения для человека вообще незнакомого с ElasticSearch. 
+Изучить можно, но явно не в рамках тестового задания.
 

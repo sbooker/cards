@@ -10,7 +10,7 @@ return [
     'id' => 'app-console',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
-    'controllerNamespace' => 'console\controllers',
+    'controllerNamespace' => 'Cards\console\controllers',
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
@@ -19,7 +19,10 @@ return [
         'fixture' => [
             'class' => 'yii\console\controllers\FixtureController',
             'namespace' => 'common\fixtures',
-          ],
+        ],
+        'create-elastic-index' => [
+            'class' => \Cards\console\controllers\CreateElasticIndex::class
+        ],
     ],
     'components' => [
         'log' => [
